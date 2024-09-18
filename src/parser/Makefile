@@ -1,0 +1,17 @@
+CC = gcc
+CFLAGS = -g
+INCLUDE = -I../../include
+SRCS = parse_command.c tostring_command.c
+OBJS = $(SRCS:.c=.o)
+LINKS = ../../build/parser/parse_command.o ../../build/parser/tostring_command.o
+INCLUDE = -I../../include
+
+.PHONY: obj clean
+
+obj : $(OBJS)
+	mkdir -p ../../build/parser/
+	mv $(OBJS) ../../build/parser/
+.c.o:	
+	$(CC) -c $(CFLAGS) $(INCLUDE) $<
+clean:
+	cd ../../build/parser && rm -f $(OBJS)
