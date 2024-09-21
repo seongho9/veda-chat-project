@@ -1,4 +1,4 @@
-CC = gcc
+# CC = gcc
 CFLAGS = -g
 INCLUDE = -I../../include
 SRCS = data_message.c data_room.c data_user.c
