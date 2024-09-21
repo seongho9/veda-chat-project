@@ -1,9 +1,8 @@
-CC = gcc
+# CC = gcc
 CFLAGS = -g
 INCLUDE = -I../../include
 SRCS = parse_command.c tostring_command.c
 OBJS = $(SRCS:.c=.o)
-LINKS = ../../build/parser/parse_command.o ../../build/parser/tostring_command.o
 INCLUDE = -I../../include
 
 .PHONY: obj clean
